@@ -16,6 +16,11 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   devtool: 'source-map',
+  externals: {
+    'cheerio': 'window',
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
   module: {
     rules: [
       {
